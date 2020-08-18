@@ -1,6 +1,6 @@
-# GoogleMaps with Ionic 4
-How to add Google Map and Multiple Marker using Ionic 4
-<img src="./03.jpg" height="250" width="250" /> 
+# How to add Google Map and Multiple Marker using Ionic 4
+<img src="./03.jpg"  /> 
+
 In most of the apps, maps are one of the most useful tools for users when included in an app. The Ionic allows us to integrate Google map in our application. We can achieve integrating Google map in Ionic in two-way
 
 * Google Map JS library
@@ -24,7 +24,7 @@ ionic start  museumGoogleJsMap  blank --type=angular
 
 In order to use the Google Maps API, you must register your application on the Google Developer Console and enable the API. To do this, start by going to the Google Developer Console for Google JS API. If you already have a project created, you can skip the next section. If not, you can follow along and create a new project for your maps application and then you have to create credentials in Google developer console.
 
-<img src="./01.jpg" height="250" width="250" /> 
+<img src="./01.jpg" /> 
 
 On clicking on CREATE AND ENABLE API, you will get API to use Google map in our project and copy the API and the past in our Ionic project **src/theme/index.html** at end of last line in header tag as
 
@@ -174,7 +174,8 @@ We have to add the list of the museum in **musuem.json** file. In src/assets/dat
       ]
 }
 ```
-<img src="./02.jpg" height="250" width="250" /> 
+<img src="./02.jpg"  /> 
+
 In home page we will read a JSON file which contains all the museum and its details. We will use fetch API to retrieve the JSON file content and loads the JSON to a local variable.  We will add search box in our apps to search museum by state name or location name. Modify the following code in **home.page.html**
 
 ```html
