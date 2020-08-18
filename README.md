@@ -25,7 +25,7 @@ ionic start  museumGoogleJsMap  blank --type=angular
 In order to use the Google Maps API, you must register your application on the Google Developer Console and enable the API. To do this, start by going to the Google Developer Console for Google JS API. If you already have a project created, you can skip the next section. If not, you can follow along and create a new project for your maps application and then you have to create credentials in Google developer console.
 
 
-On clicking on CREATE AND ENABLE API, you will get API to use Google map in our project and copy the API and the past in our Ionic project src/theme/index.html at end of last line in header tag as
+On clicking on CREATE AND ENABLE API, you will get API to use Google map in our project and copy the API and the past in our Ionic project **src/theme/index.html** at end of last line in header tag as
 
 ```js
 <script src="https://maps.googleapis.com/maps/api/js?key=YOURGOOGLEAPI&callback=initMap"
@@ -128,7 +128,7 @@ export class MuseumDataService {
 ```
 
 ## STEP 6: ADDING MUSEUM LIST AND SEARCH LIST PAGE
-We have to add the list of the museum in musuem.json file. In src/assets/data add a new file called museum.json file. Add the following museum lists.
+We have to add the list of the museum in **musuem.json** file. In src/assets/data add a new file called **museum.json** file. Add the following museum lists.
 ```json
 {
   "museums": [
@@ -174,9 +174,9 @@ We have to add the list of the museum in musuem.json file. In src/assets/data ad
 }
 ```
 
-In home page we will read a JSON file which contains all the museum and its details. We will use fetch API to retrieve the JSON file content and loads the JSON to a local variable.  We will add search box in our apps to search museum by state name or location name. Modify the following code in home.page.html 
+In home page we will read a JSON file which contains all the museum and its details. We will use fetch API to retrieve the JSON file content and loads the JSON to a local variable.  We will add search box in our apps to search museum by state name or location name. Modify the following code in **home.page.html**
 
-```js
+```html
 <ion-header>
   <ion-toolbar>
     <ion-title>Ionic Google map js</ion-title>
@@ -213,7 +213,7 @@ In home page we will read a JSON file which contains all the museum and its deta
   </div>
 </ion-content>
 ```
-In home.page.ts modify the following code, as we need to create service to set and get museum data, so that we can shared data between pages.
+In **home.page.ts** modify the following code, as we need to create service to set and get museum data, so that we can shared data between pages.
 ```
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
@@ -264,7 +264,7 @@ export class HomePage {
   }
 }
 ```
-Add the following css code in home.page.scss
+Add the following css code in **home.page.scss**
 
 ```css
 ion-content {
@@ -283,8 +283,8 @@ ion-content {
 ```
 ## Step 6: Adding Mulitple marker on Google Map
 
-We have three-page in this apps, one to display the list of the museum with search methods. This page all-museum is to the display multiple markers on same Google map.  In home page we have a button at the right top most “ALL MUSEUM” on clicking on this button will navigate us to the all-museum page to display all museum in Google map.  Modify the following code all-museum.page.html
-```angular
+We have three-page in this apps, one to display the list of the museum with search methods. This page all-museum is to the display multiple markers on same Google map.  In home page we have a button at the right top most “ALL MUSEUM” on clicking on this button will navigate us to the all-museum page to display all museum in Google map.  Modify the following code **all-museum.page.html**
+```html
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -298,7 +298,7 @@ We have three-page in this apps, one to display the list of the museum with sear
   <div #map id="map"></div>
 </ion-content>
 ```
-Modify the following code in all-museum.page.ts
+Modify the following code in **all-museum.page.ts**
 
 ```js
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
@@ -356,7 +356,7 @@ export class AllMuseumPage implements OnInit {
 }
 ```
 
-Add the following css code inall-museum.page.scss
+Add the following css code **inall-museum.page.scss**
 
 ```css
 ion-content {
@@ -368,7 +368,7 @@ ion-content {
 ```
 
 ## STEP 6: DISPLAYING INDIVIDUAL MAP FOR EACH MUSEUM WITH MUSEUM INFORMATION
-In museum-detail.page.html, we have a list of all the museum and on clicking on each museum we will display Google map for each museum with museum detail information like name of museum and state where it is located.  Modify the museum-detail.page.html
+In **museum-detail.page.html**, we have a list of all the museum and on clicking on each museum we will display Google map for each museum with museum detail information like name of museum and state where it is located.  Modify the **museum-detail.page.html**
 ```html
 <ion-header>
   <ion-toolbar>
@@ -386,8 +386,9 @@ In museum-detail.page.html, we have a list of all the museum and on clicking on 
   </ion-card>
   <div #map id="map"></div>
 </ion-content>
-Modify the following code in museum-detail.page.ts 
-
+```
+Modify the following code in **museum-detail.page.ts**
+```js
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { MuseumDataService } from '../services/museum-data.service';
@@ -440,7 +441,7 @@ export class MuseumDetailPage implements OnInit {
   }
 }
 ```
-Add the following css code in museum-detail.scss 
+Add the following css code in **museum-detail.scss** 
 ```css
 ion-content {
     #map {
