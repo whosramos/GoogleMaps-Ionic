@@ -35,10 +35,10 @@ On clicking on CREATE AND ENABLE API, you will get API to use Google map in our 
  
 ## STEP 3: INSTALLING GEOLOCATION PLUGIN
 Now we will add the Geolocation plugin, run the following command
-```js
->>ionic cordova plugin add cordova-plugin-geolocation
->>npm install @ionic-native/geolocation --save
-```
+
+> ionic cordova plugin add cordova-plugin-geolocation
+> npm install @ionic-native/geolocation --save
+
 
 ## STEP 4: LET’S BUILD THE APPS, FOLLOWING ALL THE STEPS AS 
 We have completed the external configuration, now time to write code for our museum Ionic Apps. We will add two more page.
