@@ -216,7 +216,7 @@ In home page we will read a JSON file which contains all the museum and its deta
 </ion-content>
 ```
 In **home.page.ts** modify the following code, as we need to create service to set and get museum data, so that we can shared data between pages.
-```
+```js
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { MuseumDataService } from '../services/museum-data.service';
