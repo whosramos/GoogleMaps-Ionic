@@ -94,7 +94,8 @@ export interface Museum{
  
 
 Create a folder called service in app folder, as ionic 4 we are sharing data through services. Generate service to share museum data between pages.
-> **ionic generate service museumData**
+``` ionic generate service museumData ```
+
 Run above command in app/service folder and add following file in app/service
 
 ```js
