@@ -35,15 +35,15 @@ On clicking on CREATE AND ENABLE API, you will get API to use Google map in our 
  
 ## STEP 3: INSTALLING GEOLOCATION PLUGIN
 Now we will add the Geolocation plugin, run the following command
-
-> ionic cordova plugin add cordova-plugin-geolocation
-> npm install @ionic-native/geolocation --save
-
+```
+ionic cordova plugin add cordova-plugin-geolocation
+npm install @ionic-native/geolocation --save
+```
 
 ## STEP 4: LET’S BUILD THE APPS, FOLLOWING ALL THE STEPS AS 
 We have completed the external configuration, now time to write code for our museum Ionic Apps. We will add two more page.
 
-```js
+```
 ionic generate page museum-detail
 ionic generate page all-museum
 ```
@@ -94,7 +94,10 @@ export interface Museum{
  
 
 Create a folder called service in app folder, as ionic 4 we are sharing data through services. Generate service to share museum data between pages.
-``` ionic generate service museumData ```
+
+``` 
+ionic generate service museumData 
+```
 
 Run above command in app/service folder and add following file in app/service
 
@@ -131,6 +134,7 @@ export class MuseumDataService {
 
 ## STEP 6: ADDING MUSEUM LIST AND SEARCH LIST PAGE
 We have to add the list of the museum in **musuem.json** file. In src/assets/data add a new file called **museum.json** file. Add the following museum lists.
+
 ```json
 {
   "museums": [
@@ -216,7 +220,9 @@ In home page we will read a JSON file which contains all the museum and its deta
   </div>
 </ion-content>
 ```
+
 In **home.page.ts** modify the following code, as we need to create service to set and get museum data, so that we can shared data between pages.
+
 ```js
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
